@@ -28,25 +28,25 @@ class App extends Component {
     );
 
     if (findCharacter === undefined) {
-      // failure to select a new dog
+      // failure to select a new character
       this.setState({
-        message: "You guessed incorrectly!",
+        message: "You fail!",
         topScore:
-          this.state.curScore > this.state.topScore
-            ? this.state.curScore
+          this.state.currentScore > this.state.topScore
+            ? this.state.currentScore
             : this.state.topScore,
         currentScore: 0,
-        name: name,
-        unselectedCharacters: name
+        characters: characters,
+        unselectedCharacters: characters
       });
     } else {
-      // success to select a new dog
+      // success to select a new character
       const newCharacters = this.state.unselectedCharacters.filter(
         item => item.name !== name
       );
 
       this.setState({
-        message: "You guessed correctly!",
+        message: "By the power of Greyskull!",
         currentScore: this.state.currentScore + 1,
         characters: characters,
         unselectedCharacters: newCharacters
