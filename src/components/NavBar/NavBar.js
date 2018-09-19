@@ -4,7 +4,7 @@ import './NavBar.css';
 const NavBar = props => (
     <div>
         <ul className="nav nav-bar justified-content">
-            <li><a href="/">By The Power of Greyskull!</a></li>
+            <li><a href="/">Game Time!</a></li>
             <li
                 className={props.message.indexOf('incorrectly') !== -1 ? 
                     "desc-incorrect" : 
